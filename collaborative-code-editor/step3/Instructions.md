@@ -1,0 +1,14 @@
+Here comes the main task, Let’s build the backend now.
+The main goal here is to build a real time websocketserver that helps all the connected clients in communicating with each other. You can use the Socket.io library for this (already added to the dependency list in the starter files)
+It is highly recommended that you go through [Server API](https://socket.io/docs/v4/server-api/) and the [Client API](https://socket.io/docs/v4/client-api/) for Socket.io before attempting this lab.
+
+## Here are a few pointers on how you can do it:
+- Once the user creates a new room, their username along with their room id gets stored on the backend.
+- Create a mapping of roomID’s to string[]users, connect this user via a websocket and store their information in the mapping. 
+- At this point, you can start a socket.io room on the backend with the room associated with the roomID.
+- Whenever someone else tries to join using a roomID, send their username and room id to the backend which would store them by mapping the room id to the users.
+- After that, socket.io can be used to broadcast this common message to all the other clients in the same room. Send back the information about the clients in that room to the frontend as a response.
+- On the frontend part, you can now map onto the list of clients being sent back.
+- Also, whenever a user makes any change on the code editor, handle the changes, send them to the backend, and emit these changes to every person in the sameroom. Also, handle these changes in the frontend.
+- Once the user clicks on the leave button, send their data to the backend, delete their data from the mapping, and emit this change in every person’s room.
+For better UX, show “userX left the room” as a notification, alert, or a toast.
