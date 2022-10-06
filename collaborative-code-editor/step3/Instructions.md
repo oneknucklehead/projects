@@ -12,3 +12,15 @@ It is highly recommended that you go through [Server API](https://socket.io/docs
 - Also, whenever a user makes any change on the code editor, handle the changes, send them to the backend, and emit these changes to every person in the sameroom. Also, handle these changes in the frontend.
 - Once the user clicks on the leave button, send their data to the backend, delete their data from the mapping, and emit this change in every person’s room.
 For better UX, show “userX left the room” as a notification, alert, or a toast.
+
+**NOTE**: Incase you get a cross origin error, you can simply install the cors package and pass it down to your express app and your socket server as shown below
+
+```
+const cors = require('cors')
+app.use(cors());
+```
+Then replace the earlier socket instance with the code snippet shown below so that your socket can receive requests from any other URL as well:
+```
+const io = require('socket.io')(http,{cors{origin:'*'}})
+```
+For detailed information on this refer [Socket.io documentation](https://socket.io/docs/v4/handling-cors/)
