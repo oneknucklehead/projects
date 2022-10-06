@@ -15,6 +15,6 @@ You can build homepage UI as shown
 - Add another field for username.
 - Clicking on join button would take the user to the compiler page that we will be designing and implementing in the later steps
 - Make sure that you do not allow the user to route to the compiler page without either the room id or the username. This implies that the room id and username fields are NECESSARY for routing to the compiler page.
-- you can show the errors as a notification, alert, or using react toast.
+- you can show the errors as a notification, alert, or using react toast. P.S: You can use react-hot-toast package for showing notifications
 
 ![](https://raw.githubusercontent.com/oneknucklehead/collaborative-editor/main/designs/Landing%20homepage%20%5BDesktop%5D.jpg)
