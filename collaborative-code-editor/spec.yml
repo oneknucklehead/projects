@@ -1,7 +1,7 @@
 name: Collaborative code editor
 tags: ["ReactJS",'Socket.io']
 starter-files: https://github.com/oneknucklehead/collaborative-editor
-type: frontend
+type: fullstack
 level: hard
 cover-image: https://raw.githubusercontent.com/oneknucklehead/collaborative-editor/main/designs/Cover%20Image.png
 short-description: Coding an online collaborative code editor using React and Socket.io
